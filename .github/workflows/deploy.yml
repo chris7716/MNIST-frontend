@@ -29,7 +29,7 @@ jobs:
     # Deploy the app to S3 using AWS CLI
     - name: Deploy to S3
       run: |
-        aws s3 sync ./dist/metrics-viewer/ s3://minst-frontend/ --delete --region eu-north-1
+        aws s3 sync ./dist/metrics-viewer/browser/ s3://minst-frontend/ --delete --region eu-north-1
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
