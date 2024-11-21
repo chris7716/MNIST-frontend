@@ -1,0 +1,42 @@
+.file-uploader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  width: 400px;
+  margin: 20px auto;
+}
+
+input[type="file"] {
+  margin: 10px 0;
+}
+
+.uploading-text {
+  font-size: 16px;
+  color: #ff9800;
+}
+
+.upload-success {
+  font-size: 18px;
+  color: #4caf50;
+}
+
+.upload-error {
+  font-size: 16px;
+  color: red;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

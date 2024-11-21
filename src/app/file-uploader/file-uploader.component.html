@@ -1,0 +1,25 @@
+<div class="file-uploader-container">
+  <!-- File input -->
+  <input type="file" (change)="onFileSelected($event)" accept=".pth" />
+
+  <!-- File name display -->
+  <div *ngIf="selectedFile">
+    <p>Selected File: {{ selectedFile.name }}</p>
+  </div>
+
+  <!-- Upload result -->
+  <div *ngIf="isUploading" class="uploading-text">
+    Uploading... {{ uploadProgress }}%
+  </div>
+
+  <div *ngIf="uploadSuccess" class="upload-success">
+    Upload Successful!
+    <pre>{{ metrics | json }}</pre>
+  </div>
+
+  <div *ngIf="errorMessage" class="upload-error">Error: {{ errorMessage }}</div>
+
+  <!-- Upload button -->
+  <button *ngIf="!isUploading" (click)="uploadModel()">Upload Model</button>
+  <button *ngIf="isUploading" (click)="resetUploader()">Reset</button>
+</div>
