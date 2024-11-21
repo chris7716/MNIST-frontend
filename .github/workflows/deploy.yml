@@ -18,7 +18,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Adjust to the Node.js version you're using
+        node-version: '18'  # Adjust to the Node.js version you're using
 
     # Install dependencies and build the Angular app
     - name: Install dependencies and build the app
