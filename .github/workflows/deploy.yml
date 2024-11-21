@@ -18,13 +18,19 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'  # Adjust to the Node.js version you're using
+        node-version: '18'
 
     # Install dependencies and build the Angular app
     - name: Install dependencies and build the app
       run: |
         npm install
         npm run build --prod
+
+    - name: Install AWS CLI
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip awscliv2.zip
+        sudo ./aws/install
 
     # Deploy the app to S3 using AWS CLI
     - name: Deploy to S3
